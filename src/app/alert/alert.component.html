@@ -1,0 +1,12 @@
+<div [ngClass] = "{
+  'bg-danger' : this.model.severity === 'Error',
+  'bg-info' : this.model.severity === 'Info',
+  'bg-warning' : this.model.severity === 'Warn' 
+}"
+class="card text-white mb-3" style="width: 800px;">
+    <div class="card-header">{{this.model.time}}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{this.model.severity}}</h5>
+      <p class="card-text">{{this.model.message}}</p>
+    </div>
+  </div>
